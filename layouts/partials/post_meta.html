@@ -9,7 +9,8 @@
 
 <section class="post-meta">
   {{if $authorDetailSet}}
-    {{$authorDetail := index .Site.Author $author}}
+    {{ $authorDetail := index .Site.Author $author }}
+    {{ $authorDetail.displayname }}
     {{with $authorDetail.thumbnail}}
     <a href="/author/{{$authorDetail.id}}">
       <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />

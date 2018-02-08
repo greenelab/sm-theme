@@ -122,7 +122,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "genericons", "Open Sans", sans-serif;
+    font-family: "genericons", "Montserrat", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -196,7 +196,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: "EB Garamond", serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -223,7 +223,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: normal;
     text-rendering: geometricPrecision;
 }
@@ -270,6 +270,7 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
+    font-family: "EB Garamond";
 }
 
 ol, ul {
@@ -541,7 +542,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Navigation */
@@ -570,7 +571,7 @@ body.nav-opened .nav-cover {
                         opacity 0.3s ease 0.7s;
             transition: transform 0.5s ease,
                         opacity 0.3s ease 0.7s;
-font-family: "Open Sans","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+font-family: "Montserrat","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 font-weight: 700;
 font-size: 11px;
 color: #909090;
@@ -720,7 +721,7 @@ body.nav-opened .nav {
     color: #111 !important;
     text-align: center;
     font-size: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 35px;
@@ -882,10 +883,9 @@ body.nav-opened .menu-button .word {
 .page-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
-    letter-spacing: -1px;
-    font-weight: normal;
-    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
     color: #fff;
+    text-transform: uppercase;
 }
 
 .page-description {
@@ -893,7 +893,7 @@ body.nav-opened .menu-button .word {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: "EB Garamond", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -987,7 +987,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1404,7 +1404,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 800px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1466,7 +1466,7 @@ body:not(.post-template) .post-title {
     position: relative;
     margin: 8rem 0 0 0;
     padding: 0.5rem 15px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
