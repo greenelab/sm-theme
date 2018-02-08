@@ -1,13 +1,8 @@
-<footer class="site-footer clearfix">
-  {{if .Site.Copyright}}
+<footer class="site-footer">
   <section class="copyright">
-    {{.Site.Copyright | safeHTML}}
-
-    {{if .Site.Params.creativeCommons}}
-    <a rel="license" href="http://creativecommons.org/licenses/{{.Site.Params.creativeCommons}}/4.0/"><img alt="Creative Commons License" style="vertical-align: text-bottom" src="https://i.creativecommons.org/l/{{.Site.Params.creativeCommons}}/4.0/80x15.png" /></a>
-    {{end}}
+    <p>Subversive Metadata content is licensed <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><i class="cc cc-by"></i>CC-BY</a> by its authors.</p>
+    <p>The header image is licensed <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><i class="cc cc-by"></i>CC-BY</a> from the University of Michigan Libraries.</p>
   </section>
-  {{end}}
 
   {{if ne .Site.Params.hideHUGOSupport true}}
   <section class="poweredby">

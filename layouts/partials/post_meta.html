@@ -12,7 +12,7 @@
     {{ $authorDetail := index .Site.Author $author }}
     {{ $authorDetail.displayname }}
     {{with $authorDetail.thumbnail}}
-    <a href="/author/{{$authorDetail.id}}">
+    <a href="/author/{{ $author }}">
       <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />
     </a>
     {{end}}

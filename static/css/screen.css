@@ -1490,9 +1490,9 @@ body:not(.post-template) .post-title {
 }
 
 .copyright {
-    display: block;
-    width: 45%;
-    float: left;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
 }
 
 

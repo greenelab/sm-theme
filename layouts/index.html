@@ -7,7 +7,7 @@
   {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-    {{$paginator := .Paginate (where .Data.Pages "Section" "!=" "author")}}
+    {{$paginator := .Paginate (where .Data.Pages "Section" "==" "post")}}
 
     {{/*
          we only show the fullscreen cover if we are on the first page
@@ -21,6 +21,7 @@
     {{end}}
 
     <main id="content" class="content" role="main">
+
       {{range $index, $page := $paginator.Pages}}
         {{partial "li.html" .}}
       {{end}}
