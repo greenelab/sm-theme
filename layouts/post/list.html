@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{partial "head/includes.html" .}}
+</head>
+<body class="nav-closed">
+
+  {{partial "navigation.html" .}}
+
+ <div class="site-wrapper">
+
+{{$baseurl := .Site.BaseURL}}
+{{partial "covers/paging.html" .}}
+
+<main class="content" role="main">
+  {{$paginator := .Paginator}}
+
+	{{range $index, $page := $paginator.Pages}}
+	   {{partial "li.html" .}}
+	{{end}}
+
+	{{partial "pagination.html" $paginator}}
+</main>
+
+    {{partial "footer.html" .}}
+
+  </div>
+
+  {{partial "scripts.html" .}}
+
+</body>
+</html>
