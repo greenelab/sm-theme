@@ -990,7 +990,17 @@ body:not(.post-template) .post-title {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9EABB3;
+}
+
+.post-tags {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.post-tags a {
+  color: #0288D1;
+  text-decoration: none;
 }
 
 .author-thumb {
