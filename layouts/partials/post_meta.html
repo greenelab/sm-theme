@@ -29,12 +29,4 @@
   <time class="post-date" datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML}}">
     {{.Date.Format "2 Jan 2006"}}
   </time>
-  <div class="post-tag">
-  {{if .Params.tags}}
-    {{$baseURL := .Site.BaseURL}}
-    {{range $index, $tag := .Params.tags}}
-      <a href="{{$baseURL}}tags/{{$tag | urlize}}/">#{{$tag}}</a>
-    {{end}}
-  {{end}}
-  </div>
 </section>

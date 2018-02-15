@@ -1,4 +1,7 @@
 <article class="post with-divider {{.Section}}">
+  <section class="post-categories">
+    {{partial "post_categories.html" . }}
+  </section>
   <header class="post-header">
     <h2 class="post-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
   </header>
@@ -7,5 +10,5 @@
       <p>{{.Summary}} &raquo;</p>
     </a>
   </section>
-  {{partial "post_meta.html" .}}
+  {{partial "post_meta.html" . }}
 </article>
