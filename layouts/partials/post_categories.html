@@ -1,8 +1,10 @@
 <div class="post-tags">
 {{if .Params.tags}}
   {{$baseURL := .Site.BaseURL}}
+  {{$len := (len .Params.tags)}}
   {{range $index, $tag := .Params.tags}}
-    <a href="{{$baseURL}}tags/{{$tag | urlize}}/">#{{$tag}}</a>
+    <a href="{{$baseURL}}tags/{{$tag | urlize}}/">{{$tag}}</a>
+    {{if lt (add 1 $index) $len}},{{end}}
   {{end}}
 {{end}}
 </div>

@@ -1237,15 +1237,15 @@ body:not(.post-template) .post-title {
 }
 
 .no-cover.post-head.main-header {
-    height: 85px;
+    height: 50px;
     min-height: 0;
     margin-bottom: 0;
     background: transparent;
 }
 
 .tag-head.main-header {
-    height: 40vh;
-    min-height: 180px;
+    height: 10vh;
+    min-height: 100px;
 }
 
 .author-head.main-header {
