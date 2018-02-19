@@ -10,7 +10,7 @@
 
 <div class="vertical">
   <div class="main-header-content inner">
-    <h1 class="page-title">{{.Title}}</h1>
+    <h1 class="page-title">{{.Title | truncate 50}}</h1>
     {{with .Params.description}}
     <h2 class="page-description">{{.}}</h2>
     {{end}}
