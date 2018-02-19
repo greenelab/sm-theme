@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{partial "head/includes.html" .}}
+</head>
+<body class="nav-closed">
+
+  {{partial "navigation.html" .}}
+
+  <div class="site-wrapper">
+    {{partial "covers/paging.html" .}}
+
+    <main class="content" role="main">
+      {{if .Site.Author}}
+      {{range $shortname, $author := .Site.Author}}
+      <article class="post with-divider">
+        <section class="author">
+          {{if $author.thumbnail}}
+          <div class="author-list-img" style="background-image: url({{$author.thumbnail}})"></div>
+          {{end}}
+          <h4><a href="/author/{{$shortname}}">{{$author.displayname}}</a></h4>
+          <p>{{$author.bio}}</p>
+          {{ $posts := where $.Site.Pages "Section" "==" "post" }}
+          {{ $posts := $posts | intersect (where $.Site.Pages ".Params.author" "==" $shortname) }}
+          {{ $postCount := len $posts }}
+          {{ if gt $postCount 0 }}
+          <h6>Recent posts</h6>
+          <section class="date-list">
+            <ul>
+              {{range last 5 $posts }}
+              <li>
+                <a href="{{.Permalink}}">{{.Title}}</a> &mdash; {{.Date.Format "Jan 2"}}
+              </li>
+              {{end}}
+            </ul>
+          </section>
+          {{ if gt $postCount 5}}
+          <p><a href="/author/{{$shortname}}">All posts by this author.</a></p>
+          <div class="author-meta">
+          </div>
+          {{ end }}
+          {{ end }}
+        </section>
+      </article>
+      {{end}}
+      {{end}}
+    </main>
+
+    {{partial "footer.html" .}}
+
+  </div>
+
+  {{partial "scripts.html" .}}
+</body>
+</html>

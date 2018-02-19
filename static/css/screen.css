@@ -1231,6 +1231,10 @@ body:not(.post-template) .post-title {
    6. Author profile
    ========================================================================== */
 
+.author-name {
+    text-align: center;
+}
+
 .post-head.main-header {
     height: 65vh;
     min-height: 180px;

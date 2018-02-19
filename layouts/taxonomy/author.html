@@ -1,4 +1,4 @@
-{{$author := index .Site.Author .Params.author}}
+{{$author := index .Site.Author .Page.Data.Term }}
 
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
@@ -9,32 +9,27 @@
   {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-  {{$coverImage := or .Params.cover .Site.Params.authorCover .Site.Params.cover}}
-
-  {{if not $coverImage}}
-	<header class="main-header tag-head no-cover">
-  {{else}}
-  <header class="main-header post-head" style="background-image: url({{$coverImage}})">
-  {{end}}
+    {{partial "covers/paging.html" .}}
 
     {{partial "nav.html" .}}
-    <div class="vertical">
-      <div class="main-header-content inner">
-       {{if $author.thumbnail}}
-         <div class="author-cover-img" style="background-image: url({{$author.thumbnail}})"></div>
-       {{end}}
-       <h1 class="page-title">{{$author.firstName}} {{$author.lastName}}</h1>
-      </div>
-    </div>
   </header>
 
   <main class="content" role="main">
     <article class="post">
+      <div class="vertical">
+        <div class="main-header-content inner">
+         {{if $author.thumbnail}}
+           <div class="author-cover-img" style="background-image: url({{$author.thumbnail}})"></div>
+         {{end}}
+         <p>{{ $author.bio}}
+        </div>
+      </div>
       <section class="post-content">
         {{.Content}}
       </section>
-      <h2>Posts</h2>
-        {{range .Site.Pages.GroupByDate "2006" "desc"}}
+      <h2>Articles</h2>
+        {{ $posts := where .Pages "Section" "==" "post" }}
+        {{range $posts.GroupByDate "2006" "desc"}}
         <section class="date-list">
           <h4>{{.Key}}</h4>
           <ul>
