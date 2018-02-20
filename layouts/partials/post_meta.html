@@ -1,6 +1,6 @@
 {{/* if author is set on the post's params, use that, if not, check if we have an
      author configured in the Site params */}}
-{{$author := or .Params.author .Site.Params.author}}
+{{$author := or .Params.editor .Site.Params.editor}}
 
 {{/* check to see if we have author details, note that we *must* perform this check
      explicitly, as the user might not have $author set and we'd get an error
@@ -12,13 +12,13 @@
     {{ $authorDetail := index .Site.Author $author }}
     {{ $authorDetail.displayname }}
     {{with $authorDetail.thumbnail}}
-    <a href="/author/{{ $author }}">
+    <a href="/editor/{{ $author }}">
       <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />
     </a>
     {{end}}
 
     {{/* print the shortname (id) from the details */}}
-    <a href="/author/{{$authorDetail.id}}">
+    <a href="/editor/{{$authorDetail.id}}">
     {{- $authorDetail.id -}}
     </a>
   {{else}}

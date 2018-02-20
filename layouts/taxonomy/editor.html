@@ -33,7 +33,7 @@
         <section class="date-list">
           <h4>{{.Key}}</h4>
           <ul>
-            {{range where .Pages "Section" "!=" "author"}}
+            {{range where .Pages "Section" "!=" "editor"}}
             <li>
               <a href="{{.Permalink}}">{{.Title}}</a> &mdash; {{.Date.Format "Jan 2"}}
             </li>

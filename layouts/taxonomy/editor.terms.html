@@ -18,10 +18,10 @@
           {{if $author.thumbnail}}
           <div class="author-list-img" style="background-image: url({{$author.thumbnail}})"></div>
           {{end}}
-          <h4><a href="/author/{{$shortname}}">{{$author.displayname}}</a></h4>
+          <h4><a href="/editor/{{$shortname}}">{{$author.displayname}}</a></h4>
           <p>{{$author.bio}}</p>
           {{ $posts := where $.Site.Pages "Section" "==" "post" }}
-          {{ $posts := $posts | intersect (where $.Site.Pages ".Params.author" "==" $shortname) }}
+          {{ $posts := $posts | intersect (where $.Site.Pages ".Params.editor" "==" $shortname) }}
           {{ $postCount := len $posts }}
           {{ if gt $postCount 0 }}
           <h6>Recent posts</h6>
@@ -35,7 +35,7 @@
             </ul>
           </section>
           {{ if gt $postCount 5}}
-          <p><a href="/author/{{$shortname}}">All posts by this author.</a></p>
+          <p><a href="/editor/{{$shortname}}">All posts by this editor.</a></p>
           <div class="author-meta">
           </div>
           {{ end }}
