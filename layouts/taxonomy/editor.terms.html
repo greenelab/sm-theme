@@ -18,7 +18,7 @@
           {{if $author.thumbnail}}
           <div class="author-list-img" style="background-image: url({{$author.thumbnail}})"></div>
           {{end}}
-          <h4><a href="/editor/{{$shortname}}">{{$author.displayname}}</a></h4>
+          <h4>{{$author.displayname}}</h4>
           <p>{{$author.bio}}</p>
           {{ $posts := where $.Site.Pages "Section" "==" "post" }}
           {{ $posts := $posts | intersect (where $.Site.Pages ".Params.editor" "==" $shortname) }}
