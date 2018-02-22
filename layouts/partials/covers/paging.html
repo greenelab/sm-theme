@@ -10,7 +10,11 @@
 
 <div class="vertical">
   <div class="main-header-content inner">
-    <h1 class="page-title">{{.Title | truncate 50}}</h1>
+      {{ if eq .Title "Editor" }}
+      <h1 class="page-title">Editors</h1>
+      {{ else }}
+      <h1 class="page-title">{{.Title | truncate 50}}</h1>
+    {{ end }}
     {{with .Params.description}}
     <h2 class="page-description">{{.}}</h2>
     {{end}}
